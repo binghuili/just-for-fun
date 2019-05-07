@@ -1,0 +1,84 @@
+spring:
+  application:
+    name: just-for-fun
+  mvc:
+    static-path-pattern: /**
+  messages:
+    basename: i18n/paopao-messages
+  resources:
+    static-locations:
+    - classpath:/static/
+#  mail:
+#    host: smtp.163.com
+#    username: gxfwBoe@163.com
+#    password: gxfw12345
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#        starttls:
+#          enable: true
+#          required: true
+  mail:
+    host: smtp.mxhichina.com
+    username: gxfw@largenumber.cn
+    password: Boe12345
+    properties:
+      mail:
+        smtp:
+          auth: true
+        starttls:
+          enable: true
+          required: true
+server:
+  port: 9099
+logging:
+  level:
+    root: INFO
+    com.paopao: DEBUG
+  file: /var/log/just-for-fun.log
+  pattern:
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(just-for-fun){green} %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    metadata-map:
+      startup: ${random.int}
+  client:
+    healthcheck:
+      enabled: false
+    serviceUrl:
+      defaultZone: http://paopao:12345@localhost:9097/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+#shell:
+#  ssh.port: 9988
+#  auth:
+#    simple:
+#      user:
+#        name: paopao
+#        password: 12345
+#spring:
+#  cache:
+#    type: redis
+#  redis:
+#    database: 0
+#    host:
+#    port:
+#    password:
+#  level:
+#    root: INFO
+#    com.paopao: DEBUG
+#  file: backup/sys.log
+#  pattern:
+#    file: %d{yyyy‐MM‐dd HH:mm:ss.SSS} %‐5level [%thread] %logger{50} ‐ %msg%n
+#    console: %d{yyyy‐MM‐dd HH:mm:ss.SSS} %‐5level [%thread] %logger{50} ‐ %msg%n
+
+#wx parameters

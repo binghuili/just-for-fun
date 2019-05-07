@@ -1,0 +1,27 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.paopao.sendmail.SendMailConfiguration",
+      "name": "spring.mail",
+      "type": "com.paopao.sendmail.SendMailConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.paopao.sendmail.SendMailConfiguration",
+      "name": "spring.mail.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.paopao.sendmail.SendMailConfiguration",
+      "name": "spring.mail.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.paopao.sendmail.SendMailConfiguration",
+      "name": "spring.mail.username",
+      "type": "java.lang.String"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: just-for-fun
+  mvc:
+    static-path-pattern: /**
+  messages:
+    basename: i18n/paopao-messages
+  resources:
+    static-locations:
+    - classpath:/static/
+  mail:
+    host: smtp.163.com
+    username: gxfwBoe@163.com
+    password: gxfw12345
+    properties:
+      mail:
+        smtp:
+          auth: true
+        starttls:
+          enable: true
+          required: true
+server:
+  port: 9098
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+  client:
+    healthcheck:
+      enabled: false
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka
+logging:
+  level:
+    root: INFO
+    com.paopao: DEBUG
+#wx parameters
